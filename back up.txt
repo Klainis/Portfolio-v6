@@ -1,0 +1,57 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <div class="div1">
+        <h1 class="quant">Кванториум СвДЖД</h1>
+    </div>
+
+    <div class="div2">
+        <h1 class="txt">Анкета обратной связи для кванторианцев и юных железнодорожников, окончивших выпускной класс</h1>
+    </div>
+    <form method="post" class="content">
+
+        <div class="div3">
+            <h1 class="kak_zvat">Как Вас зовут?</h1>
+            <input class="input" style="top: 90px;" name="Last_name" placeholder="Фамилия">
+            <input class="input" style="top: 127px;" name="First_name" placeholder="Имя">
+            <input class="input" style="top: 166px;" name="Middle_name" placeholder="Отчество">
+
+            <h1 class="school">Какую школу Вы закончили?</h1>
+            <input class="input" style="top: 414px;" name="school_middle" placeholder="Школа/ Лицей/ Гимназияя">
+
+            <h1 class="rzd">Юный железнодорожник</h1>
+            <input class="input" style="top: 607px;" name="rzd" placeholder="Выберите смену">
+
+            <h1 class="post">Куда поступили?</h1>
+            <input class="input" style="top: 809px;" name="city" placeholder="Город">
+            <input class="input" style="top: 846px;" name="school_new" placeholder="Учебное заведение">
+            <input class="input" style="top: 883px;" name="school_spec" placeholder="Направление (специальность)">
+
+            <h1 class="kakoy_quant">В какой квантум вы ходили?</h1>
+            <input class="input1" style="top: 162px;" name="school_new" placeholder="ВЫберите квантум">
+
+            <h1 class="class_10">Планируете идти в 10 класс?</h1>
+
+            <label class="label1">
+                Если вы закончили только 9 класс и планируете идти в 10, то отметьте "точкой" пункт слева
+                <input type="checkbox" name="klass" value="True" />
+                <span></span>
+            </label>
+            <h1 class="pos">Посещали программу “Юный железнодорожник”?</h1>
+            <label class="label2">
+                Да
+                <input type="radio" name="Fruit" value="True" />
+                <span></span>
+            </label>
+            <label class="label3">
+                Нет
+                <input type="radio" name="Fruit" value="False" />
+                <span></span>
+            </label>
+
+            <button class="but">Отправить</button>
+
+        </div>
+
+    </form>

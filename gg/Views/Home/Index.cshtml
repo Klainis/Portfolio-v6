@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <title>Home Page - gg</title>
+    <link rel="stylesheet" href="/css/site.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body style="margin:0px; width:100%;">
+
+    <div class="container">
+
+
+
+
+        <div class="tab">
+            <button class="tablinks" onclick="openCity(event, 'Piter')" style="margin-bottom: 70px;margin-top: 50px;">
+                Регистрация
+            </button>
+            <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Мое портфолио</button>
+            <button class="tablinks" onclick="openCity(event, 'Moscow')">Сообщения</button>
+            <button class="tablinks" onclick="openCity(event, 'Novosib')">Информация</button>
+        </div>
+
+        <div id="London" class="tabcontent">
+            <h1 style="    padding-top: 16px;">
+                Мое портфолио
+            </h1>
+
+            <h3 class="Text_0_sebe">Расскажите о себе:</h3>
+            <div id="dropZone3" class="litso" ondrop="handleDrop(event, 'imageContainer3')" ondragover="allowDrop(event)" ondragenter="allowDrop(event)">
+                <div id="imageContainer3">
+                    <img id="imagePreview3" src="" alt=".">
+                </div>
+            </div>
+            <div id="editable1" class="O_sebe" contenteditable="false">
+                <h4 style="margin-top: 49px;">этот текст можно редактировать</h4>
+
+            </div>
+
+            <button id="editButton1" onclick="toggleEdit(1)">Редактировать</button>
+
+            <h3 class="Text_Contacts">Контакты:</h3>
+            <div id="editable2" class="Contacts" contenteditable="false">
+                <h2 style="margin: 0; margin-left: 140px; margin-top: 22px; color: white;">
+                    Email:
+                </h2>
+                <h2 style="color: white;margin: 0;margin-left: 140px;margin-top: 49px;">
+                    Phone:
+                </h2>
+            </div>
+
+
+            <button id="editButton2" class="editButton" onclick="toggleEdit(2)">Редактировать</button>
+
+
+
+            <h3 class="Text_Left_block" style="position: RELATIVE;top: -27%;left: 28%;width: 261px;color: white;Z-INDEX: 1000;margin: 0;">
+                Ваши мероприятия:
+            </h3>
+            <div id="dropZone1" class="Left_block" ondrop="drop(event, 'imageContainer1', 'images1')" ondragover="allowDrop(event)">
+                <div id="imageContainer1">
+                    <img id="imagePreview1" src="" alt=".">
+                </div>
+            </div>
+            <div style="width: 260px;display: flex;flex-direction: row;justify-content: space-between;position: relative;top: -28%;left: 25%;">
+                <button onclick="previousImage('imageContainer1', 'images1')">
+                    Назад
+                </button>
+                <button onclick="nextImage('imageContainer1', 'images1')">
+                    Вперед
+                </button>
+            </div>
+            
+
+
+            <h3 class="Text_Right_block">Ваши сертификаты:</h3>
+            <div id="dropZone2" class="Right_block" ondrop="drop(event, 'imageContainer2', 'images2')" ondragover="allowDrop(event)">
+                <div id="imageContainer2">
+                    <img id="imagePreview2" src="" alt=".">
+                </div>
+            </div>
+            <div style="    width: 260px;display: flex;flex-direction: row;justify-content: space-between;position: relative;top: -54%;left: 50%;">
+                <button onclick="previousImage('imageContainer2', 'images2')">
+                    Назад
+                </button>
+                <button onclick="nextImage('imageContainer2', 'images2')">
+                    Вперед
+                </button>
+            </div>
+            
+
+            <div class="conect">
+                <h2 style="font-family: Montserrat;font-size: 24px;font-weight: 500;line-height: 29.26px;text-align: center;">
+                    Сообщения
+                </h2>
+
+                <div class="message">
+                    <button onclick="openCity(event, 'Moscow')">
+                        <strong>От:</strong> Пользователь1<br>
+                        <strong>Сообщение:</strong> Привет, как дела?
+                    </button>
+
+                </div>
+                <div class="message">
+                    <button onclick="openCity(event, 'Moscow')">
+                        <strong>От:</strong> Пользователь2<br>
+                        <strong>Сообщение:</strong> Здравствуйте, у меня вопрос по вашему проекту.
+                    </button>
+                </div>
+                <div class="message">
+                    <button onclick="openCity(event, 'Moscow')">
+                        <strong>От:</strong> Пользователь3<br>
+                        <strong>Сообщение:</strong> Здравствуйте, вы прошли на очный этап стажировки.
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div id="Piter" class="tabcontent">
+            <div class="container_reg">
+                <h1>Регистрация</h1>
+                <hr>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Введите Email" name="email" id="email" required>
+
+                <label for="psw"><b>Пароль</b></label>
+                <input type="password" placeholder="Введите Пароль" name="psw" id="psw" required>
+
+                <label for="psw-repeat"><b>Повторите Пароль</b></label>
+                <input type="password" placeholder="Повторите Пароль" name="psw-repeat" id="psw-repeat" required>
+                <hr>
+                <p>Создавая аккаунт, вы соглашаетесь с нашей <a href="#">Политикой конфидинциальности</a>.</p>
+
+                <button type="submit" class="registerbtn">Register</button>
+            </div>
+
+            <div class="container signin">
+                <p style="color: white;">Уже есть аккаунт? <button onclick="openCity(event, 'Vhod')">Войти</button>.</p>
+            </div>
+
+        </div>
+
+        <div id="Vhod" class="tabcontent">
+            <div class="container_vhod">
+                <form action="/action_page.php">
+                    <div class="row">
+                        <h1 style="text-align:center;margin-bottom: 60px;">Вход через соцсети или через почту</h1>
+                        <div class="vl">
+                            <span class="vl-innertext">или</span>
+                        </div>
+
+                        <div class="col">
+                            <a href="#" class="fb btn_vhod">
+                                <i class="fa fa-facebook fa-fw"></i> Вход через Госуслуги
+                            </a>
+                            <a href="#" class="twitter btn_vhod">
+                                <i class="fa fa-twitter fa-fw"></i> Вход через Вконтакте
+                            </a>
+                            <a href="#" class="google btn_vhod">
+                                <i class="fa fa-google fa-fw">
+                                </i> Вход через Google+
+                            </a>
+                        </div>
+
+                        <div class="col">
+                            <div class="hide-md-lg">
+                                <p>Или Войти через почту:</p>
+                            </div>
+
+                            <input type="text" name="username" placeholder="Почта" required>
+                            <input type="password" name="password" placeholder="Пароль" required>
+                            <input type="submit" value="Login">
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="bottom-container">
+                <div class="row" style="    height: 70px;">
+                    <div class="col">
+                        <p style="color: white;">Нет аккаунта?<button onclick="openCity(event, 'Piter')" style="color:white" class="btn">Регистрация</button></p>
+                    </div>
+                    <div class="col">
+                        <button  style="color:white" class="btn">Забыли пароль?</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div id="Moscow" class="tabcontent">
+            <div class="container">
+                <div class="sidebar">
+                    <div class="user-block" onclick="openChat('user1')">
+                        <p><strong>Ник 1</strong></p>
+                        <p>Последнее сообщение 1</p>
+                    </div>
+                    <div class="user-block" onclick="openChat('user2')">
+                        <p><strong>Ник 2</strong></p>
+                        <p>Последнее сообщение 2</p>
+                    </div>
+                    <!-- Добавьте больше пользователей по аналогии -->
+                </div>
+                <div class="chat-area">
+                    <div id="user1" class="chat-window active">
+                        <div class="chat-header">
+                            <h2>Ник 1</h2>
+                        </div>
+                        <div class="chat-messages">
+                            <p><strong>Ник 1:</strong> Привет!</p>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" id="messageUser1" placeholder="Напишите сообщение...">
+                            <button onclick="sendMessage('user1')">Отправить</button>
+                        </div>
+                    </div>
+                    <div id="user2" class="chat-window">
+                        <div class="chat-header">
+                            <h2>Ник 2</h2>
+                        </div>
+                        <div class="chat-messages">
+                            <p><strong>Ник 2:</strong> Как дела?</p>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" id="messageUser2" placeholder="Напишите сообщение...">
+                            <button onclick="sendMessage('user2')">Отправить</button>
+                        </div>
+                    </div>
+                    <!-- Добавьте больше окон чатов по аналогии -->
+                </div>
+            </div>
+
+            <script>
+                // Функция для открытия чата
+                function openChat(userId) {
+                    // Скрыть все окна чатов
+                    let chatWindows = document.getElementsByClassName('chat-window');
+                    for (let window of chatWindows) {
+                        window.classList.remove('active');
+                    }
+
+                    // Показать выбранное окно чата
+                    let chatWindow = document.getElementById(userId);
+                    if (chatWindow) {
+                        chatWindow.classList.add('active');
+                    }
+                }
+
+                // Функция для отправки сообщения
+                function sendMessage(userId) {
+                    let inputElement = document.getElementById('message' + userId.charAt(0).toUpperCase() + userId.slice(1));
+                    let messageText = inputElement.value;
+
+                    if (messageText.trim() === '') {
+                        return; // Игнорировать пустые сообщения
+                    }
+
+                    // Найти окно чата и добавить новое сообщение
+                    let chatWindow = document.getElementById(userId).getElementsByClassName('chat-messages')[0];
+                    let newMessage = document.createElement('p');
+                    newMessage.innerHTML = `<strong>Вы:</strong> ${messageText}`;
+                    chatWindow.appendChild(newMessage);
+
+                    // Прокрутить вниз, чтобы показать новое сообщение
+                    chatWindow.scrollTop = chatWindow.scrollHeight;
+
+                    // Очистить поле ввода
+                    inputElement.value = '';
+                }
+
+                // Убедиться, что первый чат виден по умолчанию
+                document.addEventListener("DOMContentLoaded", function () {
+                    let firstChatWindow = document.querySelector('.chat-window');
+                    if (firstChatWindow) {
+                        firstChatWindow.classList.add('active');
+                    }
+                });
+            </script>
+            
+        </div>
+
+
+
+        <div id="Novosib" class="tabcontent">
+            <h1 style="
+    text-align: center;
+    margin: 0;
+    padding-top: 16px;">
+                Информация
+            </h1>
+
+            <div class="tall_block">
+            </div>
+
+            <div class="calendar_new">
+                <h2 style="width: 345px;height: 67.85px;font-family: Montserrat;font-size: 24px;font-weight: 500;line-height: 29.26px; text-align: center;margin-left: 8px;}">
+                    Календарь мероприятий на месяц
+                </h2>
+
+                <div id="calendar"></div>
+                <div class="calendar-buttons">
+                    <button onclick="prevMonth()">Назад</button>
+                    <button onclick="nextMonth()">Вперёд</button>
+                </div>
+                <!-- Модальное окно -->
+                <div id="myModal" class="modal" onclick="closeModal()">
+                    <div class="modal-content" onclick="event.stopPropagation()">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <p id="modalDate">Дата</p>
+                        <!-- Дополнительное содержимое модального блока -->
+                    </div>
+                </div>
+
+                <script src="calendar.js"></script>
+            </div>
+
+
+
+            <div class="new_rating">
+
+                <h2 style="    margin: 0;width: 290px;height: 30.58px;font-family: Montserrat;font-size: 24px;font-weight: 500;line-height: 29.26px;text-align: center;">
+                    Мой рейтинг
+                </h2>
+
+                <h3 style="margin: 0;width: 308px;height: 70.72px;font-family: Montserrat;font-size: 20px;font-weight: 400;line-height: 24.38px;text-align: left;margin-top: 35px;">
+                    Количество баллов за участие в мероприятиях:
+                </h3>
+
+                <h3 style="margin: 0;width: 308px;height: 50.65px;top: 417.62px;left: 557px;font-family: Montserrat;font-size: 20px;font-weight: 400;line-height: 24.38px;text-align: left;margin-top: 30px;">
+                    Количество сертификатов:
+                </h3>
+
+                <h2 style="    margin: 0;    width: 184px;   height: 24.85px;    top: 514.15px;    left: 557px;    gap: 0px;    opacity: 0px;    margin-top: 40px;    font-family: Montserrat;    font-size: 20px;    font-weight: 700;    line-height: 24.38px;    text-align: left;margin-bottom: 40px;">
+                    Общий рейтинг:
+                </h2>
+
+                <div class="radial-chart">
+                    <div class="segment gray" data-percent="30"></div>
+                    <div class="segment blue" data-percent="50"></div>
+                    <div class="segment green" data-percent="20"></div>
+                </div>
+            </div>
+
+            <div class="admin_contacts">
+                <h2 style="width: 331.12px;height: 35.36px;top: 251.34px;left: 887.53px;gap: 0px;opacity: 0px;font-family: Montserrat;font-size: 24px;font-weight: 500;line-height: 29.26px;text-align: center;">
+                    Контакты создателя
+                </h2>
+
+                <button style="    width: 309.02px;
+    height: 27.71px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.5px;
+    text-align: center;
+    margin-bottom: 10px;
+    background: none;
+    color: black;">
+                    Политика конфиденциальности
+                </button>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=sVmuwmso0YllN8Udk1Fmtvdlfwb4E2Mg03JhzJYvO3k"></script>
+
+
+    <!-- Visual Studio Browser Link -->
+    <script type="text/javascript" src="/_vs/browserLink" async="async" id="__browserLink_initializationData" data-requestId="ecda79b05f1546a9b280483f625ba68b" data-requestMappingFromServer="false" data-connectUrl="http://localhost:58806/396eefd6fca14fddb9933b3cd81216ed/browserLink"></script>
+    <!-- End Browser Link -->
+    <script src="/_framework/aspnetcore-browser-refresh.js"></script>
+</body>
+</html>

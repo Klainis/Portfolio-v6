@@ -1,0 +1,855 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+
+
+.body {
+    margin: 0px;
+    width: 1920px;
+    height: 1080px;
+    font-family: sans-serif;
+    background-color: #95A3E9;
+}
+
+
+/* Style the tab */
+.tab {
+    float: left;
+    width: 30%;
+    height: 1002px;
+}
+
+    /* Style the buttons that are used to open the tab content */
+    .tab button {
+        display: block;
+        /* background-color: inherit; */
+        /* background-color: inherit; */
+        color: white;
+        padding: 49px 16px;
+        width: 90%;
+        border: none;
+        outline: none;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s;
+        background-color: #5C1AE8;
+        margin-bottom: 34px;
+        border-radius: 40px;
+        text-align: center;
+        font-size: 30px;
+        margin-left: 20px;
+    }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 70%;
+    border-left: none;
+    height: 1080px;
+}
+
+
+.litso {
+    background-color: burlywood;
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 60%;
+    top: 0%;
+    left: 0px;
+    border-radius: 30px;
+}
+
+.O_sebe {
+    background-color: rgb(89, 112, 65);
+    display: inline-block;
+    position: relative;
+    color: white;
+    width: 45%;
+    height: 20%;
+    top: 6%;
+    left: 5%;
+    border-radius: 30px;
+}
+
+.Contacts {
+    background-color: rgb(89, 112, 65);
+    display: inline-block;
+    position: relative;
+    width: 45%;
+    height: 14%;
+    top: -34%;
+    left: 25%;
+    border-radius: 30px;
+}
+
+.conect {
+    width: 20%;
+    height: 60%;
+    top: -127%;
+    LEFT: 76%;
+    border-radius: 30px;
+    background-color: #E2EBF9;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.Left_block {
+    background-color: #894242;
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 22%;
+    top: -29%;
+    left: 25%;
+    border-radius: 30px;
+}
+
+.Right_block {
+    background-color: #894242;
+    display: inline-block;
+    position: relative;
+    width: 20%;
+    height: 22%;
+    top: -55%;
+    left: 50%;
+    border-radius: 30px;
+}
+
+
+#editButtonContainer1 {
+    
+}
+
+#editButtonContainer2 {
+
+}
+
+#editButton1 {
+    position: relative;
+    right: 9%;
+    z-index: 1000;
+    width: 12%;
+    top: 18%;
+    background-color: rgb(89, 112, 65);
+}
+
+
+#editButton2 {
+    position: relative;
+    right: -11%;
+    z-index: 1000;
+    width: 12%;
+    top: -33%;
+    background-color: rgb(89, 112, 65);
+}
+
+
+.Text_0_sebe {
+    position: relative;
+    top: 11%;
+    left: 42%;
+    width: 200px;
+    color: white;
+    z-index: 10000;
+}
+
+.Text_Contacts {
+    position: relative;
+    top: -27%;
+    left: 26%;
+    width: 109px;
+    z-index: 10000;
+    color: white;
+    margin: 0px;
+}
+}
+
+.Text_Left_block {
+    position: RELATIVE;
+    top: -27%;
+    left: 28%;
+    width: 261px;
+    color: white;
+    Z-INDEX: 1000;
+    margin: 0;
+}
+
+.Text_Right_block {
+    position: RELATIVE;
+    top: -53%;
+    left: 53%;
+    width: 261px;
+    color: white;
+    Z-INDEX: 1000;
+    margin: 0;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.calendar-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+.radial-chart {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ddd;
+    left: 35%;
+}
+
+.segment {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip: rect(0, 50px, 100px, 0);
+    border-radius: 50%;
+    transform: rotate(0deg);
+}
+
+    .segment:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        clip: rect(0, 100px, 100px, 50px);
+        border-radius: 50%;
+    }
+
+    .segment .fill {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        clip: rect(0, 100px, 100px, 50px);
+        border-radius: 50%;
+    }
+
+.gray {
+    transform: rotate(108deg);
+    background-color: gray;
+}
+
+    .gray .fill {
+        background-color: gray;
+    }
+
+.blue {
+    transform: rotate(216deg);
+    background-color: blue;
+}
+
+    .blue .fill {
+        background-color: blue;
+    }
+
+.green {
+    transform: rotate(324deg);
+    background-color: green;
+}
+
+    .green .fill {
+        background-color: green;
+    }
+
+#imagePreview1 {
+    margin: 10px;
+    border-radius: 10px;
+    width: 94%;
+    height: 90%;
+    margin-top: 24px;
+}
+
+#imagePreview2 {
+    margin: 10px;
+    border-radius: 10px;
+    width: 94%;
+    height: 90%;
+    margin-top: 24px;
+}
+
+#imagePreview3 {
+    width: 98%;
+    height: 98%;
+    margin: 4px;
+}
+
+#imageContainer1 {
+    height: 95%;
+}
+
+#imageContainer2 {
+    height: 90%;
+}
+
+#imageContainer3 {
+    height: 100%;
+
+}   
+
+
+.base {
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    left: 35%;
+    top: 20%;
+    background-color: #3c72a7;
+}
+
+.Flex_block {
+    display: flex;
+    flex-direction: row;
+    min-height: 405px;
+    width: auto;
+    row-gap: 16px;
+    height: 100%;
+    margin: 20px;
+}
+
+.Left_part {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-right: 16px;
+    width: 80%;
+    height: 90%;
+}
+
+.Right_part {
+    padding: 24px;
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+}
+
+.Position {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-width: 624px;
+    height: 40%;
+    background-color: burlywood;
+}
+
+.Achivments {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    height: 40%;
+    background-color: burlywood;
+}
+
+
+#regForm {
+    background-color: #ffffff;
+    margin: 100px auto;
+    font-family: Raleway;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+}
+
+h1 {
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+}
+
+    
+    input.invalid {
+        background-color: #ffdddd;
+    }
+
+
+.tab_reg {
+    display: none;
+}
+
+
+
+button {
+    background-color: #04AA6D;
+    color: #ffffff;
+    border: none;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+}
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+#prevBtn {
+    background-color: #bbbbbb;
+}
+
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+
+    .step.active {
+        opacity: 1;
+    }
+
+    
+    .step.finish {
+        background-color: #04AA6D;
+    }
+
+.message {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+
+.editButton, .originalityCounter {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-left: 10px;
+}
+
+.originalityCounter1 {
+    position: absolute;
+    right: 15%;
+    z-index: 1000;
+    width: 12%;
+    top: 40%;
+}
+
+.originalityCounter2 {
+    position: absolute;
+    right: 15%;
+    z-index: 1000;
+    width: 12%;
+    top: 63%;
+}
+
+
+.tall_block {
+    width: 1110px;
+    height: 84px;
+    top: 124px;
+    left: 128px;
+    border-radius: 30px;
+    position: relative;
+    background-color: #FBD4D4;
+}
+
+.calendar_new {
+    width: 358px;
+    height: 496px;
+    top: 237px;
+    left: 128px;
+    position: relative;
+    background-color: #FCAA6F;
+    border-radius: 30px;
+}
+
+.new_rating {
+    width: 308px;
+    height: 496px;
+    top: -260px;
+    left: 529px;
+    border-radius: 30px;
+    position: relative;
+    background-color: #FFDBBA;
+    padding: 10px;
+}
+
+.admin_contacts {
+    width: 346.17px;
+    height: 496px;
+    top: -757px;
+    left: 880px;
+    border-radius: 30px;
+    background-color: #FCAA6F;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+
+.sidebar {
+    width: 25%;
+    background-color: #f1f1f1;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.user-block {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .user-block:hover {
+        background-color: #e0e0e0;
+    }
+
+.chat-area {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-left: 1px solid #ccc;
+}
+
+.chat-window {
+    display: none; /* Изначально скрыть все окна чатов */
+    flex-direction: column;
+    height: 100%;
+}
+
+    .chat-window.active {
+        display: flex; /* Показать только активное окно чата */
+    }
+
+.chat-header {
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+    .chat-input input {
+        flex-grow: 1;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-right: 10px;
+    }
+
+    .chat-input button {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 3px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .chat-input button:hover {
+            background-color: #45a049;
+        }
+
+
+
+.container_reg {
+    padding: 16px;
+    background-color: white;
+}
+
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+    input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+
+.registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+    .registerbtn:hover {
+        opacity: 1;
+    }
+
+/* Add a blue text color to links */
+a {
+    color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #666;
+    text-align: center;
+    height: 70px;
+}
+
+.container_vhod {
+    position: relative;
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding: 20px 0 30px 0;
+}
+
+input:hover,
+.btn:hover {
+    opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+    background-color: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background-color: #55ACEE;
+    color: white;
+}
+
+.google {
+    background-color: #dd4b39;
+    color: white;
+}
+
+/* style the submit button */
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    cursor: pointer;
+}
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+/* Two-column layout */
+.col {
+    float: left;
+    width: 50%;
+    margin: auto;
+    padding: 0 50px;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* vertical line */
+.vl {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border: 2px solid #ddd;
+    height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+    display: none;
+}
+
+/* bottom container */
+.bottom-container {
+    text-align: center;
+    background-color: #666;
+    border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+    .col {
+        width: 100%;
+        margin-top: 0;
+    }
+    /* hide the vertical line */
+    .vl {
+        display: none;
+    }
+    /* show the hidden text on small screens */
+    .hide-md-lg {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+.btn_vhod {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none; /* remove underline from anchors */
+}
+
+    input:hover,
+    .btn_vhod:hover {
+        opacity: 1;
+    }
